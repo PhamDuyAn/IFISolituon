@@ -1,0 +1,6 @@
+com/mkyong/Application.class
+com/mkyong/book/service/IssuesDemoServiceImpl.class
+com/mkyong/book/service/IssuesDemoService.class
+com/mkyong/book/controller/IssuesDemoController.class
+com/mkyong/book/repository/IssuesDemoRepository.class
+com/mkyong/book/model/IssuesDemo.class
