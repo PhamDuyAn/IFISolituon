@@ -1,0 +1,13 @@
+<h2>Update User</h2>
+<h4 *ngIf="!isUpdate" >User doen't exist!</h4>
+<button routerLink ="/" >Back</button>
+<form id="edituser" name = "edituser" #userdata="ngForm" (ngSubmit)="edituser(userdata.value)" >
+  <label for="fullname">Fullname: </label><input type="text" name="fullname" id="fullname" placeholder="fullname" [(ngModel)]="data.fullname" ngModel ><br>
+  <label for="date">Date: </label><input type="date" name="date" id="date" placeholder="date" [(ngModel)]="data.date" ngModel ><br>
+  <!-- <label>Address: </label><br>
+    <input type="text" name="street" id="street" placeholder="street" ngModel >
+    <input type="text" name="city" id="city" placeholder="city" ngModel >
+    <input type="text" name="state" id="state" placeholder="state" ngModel ><br> -->
+  <label for="sex">Sex: </label><input type="text" name="sex" id="sex" placeholder="sex" [(ngModel)]="data.sex" ngModel ><br>
+  <input type="submit" value="Update User">
+</form>

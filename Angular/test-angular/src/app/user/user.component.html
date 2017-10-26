@@ -1,0 +1,23 @@
+<h2>Get All user</h2>
+<button routerLink="/adduser">Add User</button>
+<table class="table">
+  <tr>
+    <th class="bg-primary">ID</th>
+    <td class="bg-primary">Fullname</td>
+    <td class="bg-primary">Date</td>
+    <!-- <td class="bg-primary">Address</td> -->
+    <td class="bg-primary">Sex</td>
+    <td class="bg-primary"></td>
+    <td class="bg-primary"></td>
+  </tr>
+  <tr *ngFor="let usr of users">
+    <th scope="row">{{usr.id}}</th>
+    <td>{{usr.fullname}}</td>
+    <td>{{usr.date|date}}</td>
+    <!-- <td>{{usr.address.street}}-{{usr.address.city}}-{{usr.address.state}}</td> -->
+    <td>{{usr.sex}}</td>
+    <td><a class="badge badge-success" [routerLink]="['/update',usr.id]">update</a> </td>
+    <td (click)= "deleteuser(usr.id)"><a class="badge badge-success" >X</a></td>
+  </tr>
+</table>
+
